@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* Set body and html height for proper layout and center alignment */
+      html,
+      body {
+        height: 100%;
+        position: relative;
+        margin-top: 30pt;
+        background-color: black;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+      }
+
+      /* Header layout: flexbox for space between title and navigation */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* Common layout for main content sections */
+      .half {
+        width: 100%;
+        display: flex;
+      }
+
+      /* Styling for the title */
+      h1 {
+        position: relative;
+        color: ghostwhite;
+        margin: 0;
+        font-size: 8mm;
+        font-weight: 500;
+      }
+
+      /* Navigation bar styles */
+      header nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        left: 30pt;
+        gap: 40px; /* Space between navigation items */
+      }
+
+      /* Navigation links styling */
+      header nav li a {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        padding-bottom: 5px;
+        font-size: 1rem;
+      }
+
+      /* Hover and active styles for navigation links */
+      header nav li.current a::after,
+      header nav li a:hover::after {
+        position: absolute;
+        content: "";
+        background-color: #92d050; /* Line color */
+        width: 70px; /* Line width */
+        height: 3px; /* Line thickness */
+        bottom: -3px; /* Line vertical position */
+        left: 50%; /* Line horizontal position */
+        transform: translateX(-50%);
+      }
+
+      /* Change line color on hover */
+      header nav li a:hover::after {
+        background-color: #e7da66;
+      }
+
+      /* Main content layout: flexbox for vertical alignment */
+      main {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60pt;
+        display: flex;
+        flex: 1;
+      }
+
+      /* Article layout: space between image and text sections */
+      article {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      /* Style for the image container */
+      .content_img {
+        flex-basis: 50%; /* 50% width of parent */
+      }
+
+      /* Style for the text content */
+      .content_desc {
+        flex-basis: 50%; /* 50% width of parent */
+        color: white;
+      }
+
+      /* Style for the image */
+      img {
+        position: relative;
+        margin-left: 20%;
+        max-width: 70%;
+        height: auto;
+        border-radius: 3px;
+      }
+
+      /* Style for the footer */
+      aside {
+        width: 100%;
+      }
+
+      /* Footer layout: flexbox for equal spacing */
+      footer {
+        position: relative;
+        display: flex;
+        color: white;
+        justify-content: space-around;
+      }
+
+      /* Footer text styling */
+      footer p {
+        display: flex;
+        color: gray;
+      }
+
+      /* Footer navigation layout */
+      footer nav {
+        display: flex;
+        align-items: center;
+      }
+
+      /* Footer navigation items styling */
+      footer nav ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 40px;
+      }
+
+      /* Footer navigation links styling */
+      footer nav li a {
+        color: gray;
+        text-decoration: none;
+      }
+
+      /* Time styling in footer */
+      time {
+        color: gray;
+        align-items: center;
+        display: flex;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header section with title and navigation -->
+    <header class="header">
+      <h1>Ayumu Miyamoto</h1>
+
+      <!-- Global navigation bar -->
+      <nav aria-label="global">
+        <ul>
+          <li class="current"><a href="#">Home</a></li>
+          <li><a href="#">Works</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main content section -->
+    <main>
+      <article class="half">
+        <!-- Image section -->
+        <section class="content_img"><img src="asset/IMG_2856.png" alt="About Me Image" /></section>
+
+        <!-- Text section -->
+        <section class="content_desc">
+          <h2>About Me</h2>
+          <h3>Profile</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quod, voluptates,
+            quae, quos quia quibusdam quidem voluptas repudiandae quas doloremque doloribus.
+          </p>
+          <h3>Skills</h3>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis autem amet quaerat
+          eveniet minima porro reiciendis rerum consequuntur excepturi ut voluptatum.
+        </section>
+      </article>
+    </main>
+
+    <!-- Footer section -->
+    <aside>
+      <footer>
+        <!-- Footer copyright -->
+        <p>&copy; 2024 Ayumu Miyamoto</p>
+
+        <!-- Local navigation in footer -->
+        <nav aria-label="local">
+          <ul>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">FQA</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Add me</a></li>
+          </ul>
+        </nav>
+
+        <!-- Footer time information -->
+        <p>
+          This site was made on
+          <time datetime="2024-12-01T14:30:00">2:30 PM on December 1, 2024</time>
+        </p>
+      </footer>
+    </aside>
+  </body>
+</html>
